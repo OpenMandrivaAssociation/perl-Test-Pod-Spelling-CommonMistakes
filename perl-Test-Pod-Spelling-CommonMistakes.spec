@@ -1,15 +1,13 @@
 %define upstream_name    Test-Pod-Spelling-CommonMistakes
-%define upstream_version 1.001
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	1.001
+Release:	2
 
 Summary:	Checks POD for common spelling mistakes
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/apocalypse/perl-test-pod-spelling-commonmistakes
-Source0:	https://cpan.metacpan.org/authors/id/A/AP/APOCAL/Test-Pod-Spelling-CommonMistakes-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/A/AP/APOCAL/Test-Pod-Spelling-CommonMistakes-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -26,7 +24,7 @@ and instead uses the Pod::Spell::CommonMistakes manpage for the heavy
 lifting. Using it is the same as any standard Test::* module, as seen here.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
